@@ -1,0 +1,25 @@
+Options +FollowSymLinks
+Options -MultiViews
+
+IndexIgnore *
+Options -Indexes
+
+RewriteEngine On
+#RewriteCond %{HTTPS} !=on 
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#PÁGINAS SIMPLES
+RewriteRule ^home/?([a-zA-Z0-9-–]+)?/?$ index.php [NC,L]
+RewriteRule ^quem-somos/?$ quem_somos.php [NC]
+RewriteRule ^seja-nosso-parceiro/?$ seja_parceiro.php [NC]
+RewriteRule ^faq/?$ faq.php [NC]
+RewriteRule ^catalogo/?$ catalogo.php [NC]
+RewriteRule ^contato/?$ contato.php [NC]
+
+# páginas com url dinâmicas
+RewriteRule ^produtos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ produtos.php?p1=$1&p2=$2 [QSA,L]
+RewriteRule ^categorias/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ categorias.php?p1=$1&p2=$2 [QSA,L]
+
+# envio de emails
+RewriteRule ^envia_parceria/?$ envia_parceria.php [NC]
+RewriteRule ^quero_novidades/?$ quero_novidades.php [NC]

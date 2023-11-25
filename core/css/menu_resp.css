@@ -1,0 +1,228 @@
+.toggle,
+[id^=drop] {
+    display: none
+}
+
+nav {
+    margin: 0px auto;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+nav label {
+    content: ""
+}
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+nav a,
+nav label {
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    color: #fff
+}
+
+.altura-menu {
+    height: 40px
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: block;
+    float: none
+}
+
+nav ul li {
+    margin: 0 auto;
+    float: right;
+    text-align: center;
+    position: relative;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+@media screen and (min-width:1400px) {
+    nav ul li {
+        width: 10.5%
+    }
+}
+
+nav ul li a {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    color: #fff
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    z-index: 99999999;
+    left: 0;
+    margin-top: 10px
+}
+
+nav ul li:hover>ul {
+    display: block
+}
+
+nav ul li ul li {
+    width: 260px!important;
+    float: none;
+    display: list-item;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    padding: 15px;
+    background-color: #ccc!important;
+    border-radius: 0;
+    text-align: left;
+    line-height: 12pt;
+    border: #444 solid 1px!important
+}
+
+nav ul li ul li:hover {
+    background: #ffff!important
+}
+
+nav ul li ul li img {
+    margin: 0
+}
+
+nav ul li ul li a {
+    color: #444;
+    text-align: left!important
+}
+
+nav ul li ul li ul {
+    position: absolute;
+    top: -10px;
+    left: 220px;
+    z-index: 9999999
+}
+
+nav ul li ul li ul li {
+    text-align: left
+}
+
+.fechar_menu {
+    display: none
+}
+
+@media screen and (max-width:1400px) {
+    .fechar_menu,
+    [id^=drop]:checked+ul {
+        display: block
+    }
+    .barras {
+        margin-right: 5px;
+        margin-top: -12px;
+        cursor: pointer;
+    }
+    .barras:hover {
+        background: 0 0
+    }
+    .div-central {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center
+    }
+    .barras i {
+        margin-bottom: 8px;
+        font-size: 33pt;
+        line-height: 33pt;
+        color: #cccc;
+        float: right;
+        margin-right: 0px
+    }
+    .menu_resp {
+        width: 100%;
+        position: absolute;
+        top: -20px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9)
+    }
+    .toggle+a {
+        display: none
+    }
+    .toggle {
+        display: block;
+        font-size: 11pt;
+        text-decoration: none;
+        border: none;
+        text-align: left;
+        height: auto;
+        line-height: 12pt;
+        color: #444
+    }
+    .toggle a:hover {
+        color: #fff
+    }
+    nav {
+        margin: 8px auto;
+        padding: 10px;
+        width: 90%;
+    }
+    nav .submenu {
+        color: #444;
+        text-align: left;
+    }
+    nav ul li {
+        display: block;
+        background: #ccc;
+        width: 85%;
+        padding: 10px 30px 10px 15px;
+        border: 1px solid #444;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 0;
+        float: left;
+        color: #444
+    }
+    /* .menu-desk {
+        display: none;
+    } */
+    nav a {
+        padding: 0;
+        color: #444
+    }
+    nav ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        margin: 0 auto
+    }
+    nav ul li ul li {
+        width: 90%!important;
+        display: block
+    }
+    nav ul li ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0
+    }
+    nav ul li:hover>ul,
+    nav ul ul li:hover>ul {
+        display: none
+    }
+}
